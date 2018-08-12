@@ -4,7 +4,7 @@
             <mat-card-title>{{news.title}}</mat-card-title>
             <mat-card-subtitle>{{news.introText}}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image [src]="news.image">
+          <img mat-card-image [src]="news.image" [alt]="news.title">
           <mat-card-content>
             <p>{{news.content}}</p>
           </mat-card-content>
