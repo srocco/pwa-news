@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { MatToolbarModule, MatCardModule, MatListModule } from '@angular/material';
-import { NewsComponent } from './news/news.component'
+import { NewsComponent } from './news/news.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NewsComponent } from './news/news.component'
     BrowserModule,
     MatToolbarModule,
     MatCardModule,
-    MatListModule 
+    MatListModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }) 
   ],
   providers: [],
   bootstrap: [AppComponent]
