@@ -3,12 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { MatToolbarModule, MatCardModule, MatListModule } from '@angular/material';
+import { NewsComponent } from './news/news.component'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
