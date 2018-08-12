@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "index": "/pwa-news/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/pwa-news/favicon.ico",
+        "/pwa-news/index.html",
+        "/pwa-news/main.a6c98b297f95e07a9401.js",
+        "/pwa-news/polyfills.2f4a59095805af02bd79.js",
+        "/pwa-news/runtime.a66f828dca56eeb90e02.js",
+        "/pwa-news/styles.b00ebcd117371b9740d3.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/pwa-news/assets/icons/icon-128x128.png",
+        "/pwa-news/assets/icons/icon-144x144.png",
+        "/pwa-news/assets/icons/icon-152x152.png",
+        "/pwa-news/assets/icons/icon-192x192.png",
+        "/pwa-news/assets/icons/icon-384x384.png",
+        "/pwa-news/assets/icons/icon-512x512.png",
+        "/pwa-news/assets/icons/icon-72x72.png",
+        "/pwa-news/assets/icons/icon-96x96.png",
+        "/pwa-news/assets/news_1.png",
+        "/pwa-news/assets/news_2.png",
+        "/pwa-news/assets/news_3.png",
+        "/pwa-news/assets/news_4.jpg",
+        "/pwa-news/assets/news_5.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/pwa-news/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/pwa-news/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/pwa-news/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/pwa-news/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/pwa-news/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/pwa-news/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/pwa-news/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/pwa-news/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/pwa-news/assets/news_1.png": "b1c02c838c3dcda7b92b1af097d1e1a742431bd2",
+    "/pwa-news/assets/news_2.png": "d5bac72e9f483e9cff9d9e579c32690a8ba5bbc6",
+    "/pwa-news/assets/news_3.png": "02b9e7c1264d4eda3d1f9f1c6e3811ffca49d602",
+    "/pwa-news/assets/news_4.jpg": "983b48b21a5c2b5e55a50363c0ad77c9e3182a40",
+    "/pwa-news/assets/news_5.jpg": "df06cdaad57dbca808bbbda139914671710dadb5",
+    "/pwa-news/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/pwa-news/index.html": "336891774e018f1a072204b5ebc3c578cbff4066",
+    "/pwa-news/main.a6c98b297f95e07a9401.js": "243ea7ed674b2b7728e9daf9944d8668b4a34bb0",
+    "/pwa-news/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "/pwa-news/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/pwa-news/styles.b00ebcd117371b9740d3.css": "d6bfb1da54f7a97297db992023adefd9f9ced2ad"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
