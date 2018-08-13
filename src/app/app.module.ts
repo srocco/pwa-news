@@ -7,6 +7,11 @@ import { MatToolbarModule, MatCardModule, MatListModule } from '@angular/materia
 import { NewsComponent } from './news/news.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'
+import { AngularFireModule } from '../../node_modules/angularfire2';
+import { AngularFireDatabaseModule } from '../../node_modules/angularfire2/database';
+import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
+import { MessagingService } from './shared/messaging.service';
+import { AsyncPipe } from '../../node_modules/@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,15 @@ import { environment } from '../environments/environment'
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }) 
+
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production },
+  ) 
   ],
-  providers: [],
+  providers: [MessagingService, AsyncPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
