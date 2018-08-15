@@ -12,17 +12,19 @@ export class AppComponent {
   title = 'Charla PWA - Última noticias';
   message;
 
-  constructor(private updates: SwUpdate, private messagingService: MessagingService, 
-              private localStorageService: LocalStorageService) { 
-      updates.activateUpdate().then(() => {
+  constructor(private swUpdate: SwUpdate, private messagingService: MessagingService,
+    private localStorageService: LocalStorageService) {
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.activateUpdate().then(() => {
         //document.location.reload();
       });
+    }
   }
 
   ngOnInit() {
-    var userId =this.localStorageService.getFromLocalStorage("userId");
-    if (!userId){
-      var random = Math.floor(Math.random()*(100000-1+1)+1);
+    var userId = this.localStorageService.getFromLocalStorage("userId");
+    if (!userId) {
+      var random = Math.floor(Math.random() * (100000 - 1 + 1) + 1);
       userId = 'user001' + random;
       this.localStorageService.storeOnLocalStorage("userId");
     }
