@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { News } from './news.model';
-import { NEWS } from 'src/app/news/mock.news';
+import { NEWS } from './mock.news';
 import { Observable, of } from 'rxjs';
 
 import { delay } from "rxjs/operators";

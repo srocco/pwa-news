@@ -7,11 +7,13 @@ import { MatToolbarModule, MatCardModule, MatListModule } from '@angular/materia
 import { NewsComponent } from './news/news.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'
-import { AngularFireModule } from '../../node_modules/angularfire2';
-import { AngularFireDatabaseModule } from '../../node_modules/angularfire2/database';
-import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MessagingService } from './shared/messaging.service';
-import { AsyncPipe } from '../../node_modules/@angular/common';
+import { AsyncPipe } from '@angular/common';
+import { StorageServiceModule } from 'angular-webstorage-service';
+import { LocalStorageService } from './shared/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { AsyncPipe } from '../../node_modules/@angular/common';
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-
+    StorageServiceModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -31,7 +33,7 @@ import { AsyncPipe } from '../../node_modules/@angular/common';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production },
   ) 
   ],
-  providers: [MessagingService, AsyncPipe],
+  providers: [MessagingService, LocalStorageService,AsyncPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
